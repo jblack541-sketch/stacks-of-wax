@@ -1,0 +1,1 @@
+import{t as e}from"./stacks-app-BZgNO91p.js";var t=e;export{t as component};
