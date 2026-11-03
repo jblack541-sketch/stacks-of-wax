@@ -1,4 +1,4 @@
-const CACHE = "stacks-of-wax-v4";
+const CACHE = "stacks-of-wax-v5";
 
 const SCOPE = new URL(self.registration.scope).pathname;
 
