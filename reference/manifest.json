@@ -1,0 +1,110 @@
+{
+  "format": 1,
+  "built": "2026-11-03T06:48:21.750Z",
+  "sample": true,
+  "source": {
+    "name": "Discogs",
+    "license": "CC0-1.0",
+    "url": "https://data.discogs.com/",
+    "dump": "discogs-sample.xml",
+    "note": "Starter set built from scripts/fixtures/discogs-sample.xml so lookup works offline. Run this script without --sample to rebuild from the full monthly dump."
+  },
+  "counts": {
+    "releases": 13,
+    "tracks": 70,
+    "credits": 96
+  },
+  "bytes": {
+    "json": 8332,
+    "gzip": 4246
+  },
+  "chunks": [
+    {
+      "id": "000",
+      "file": "chunks/000.json.gz",
+      "releases": 13,
+      "gzip": 2969
+    }
+  ],
+  "catalogShards": [
+    {
+      "id": "7",
+      "file": "index/catalog-7.json.gz"
+    },
+    {
+      "id": "8",
+      "file": "index/catalog-8.json.gz"
+    },
+    {
+      "id": "a",
+      "file": "index/catalog-a.json.gz"
+    },
+    {
+      "id": "b",
+      "file": "index/catalog-b.json.gz"
+    },
+    {
+      "id": "c",
+      "file": "index/catalog-c.json.gz"
+    },
+    {
+      "id": "i",
+      "file": "index/catalog-i.json.gz"
+    },
+    {
+      "id": "o",
+      "file": "index/catalog-o.json.gz"
+    },
+    {
+      "id": "p",
+      "file": "index/catalog-p.json.gz"
+    },
+    {
+      "id": "r",
+      "file": "index/catalog-r.json.gz"
+    }
+  ],
+  "titleShards": [
+    {
+      "id": "a",
+      "file": "index/title-a.json.gz"
+    },
+    {
+      "id": "b",
+      "file": "index/title-b.json.gz"
+    },
+    {
+      "id": "c",
+      "file": "index/title-c.json.gz"
+    },
+    {
+      "id": "h",
+      "file": "index/title-h.json.gz"
+    },
+    {
+      "id": "j",
+      "file": "index/title-j.json.gz"
+    },
+    {
+      "id": "l",
+      "file": "index/title-l.json.gz"
+    },
+    {
+      "id": "m",
+      "file": "index/title-m.json.gz"
+    },
+    {
+      "id": "s",
+      "file": "index/title-s.json.gz"
+    },
+    {
+      "id": "t",
+      "file": "index/title-t.json.gz"
+    },
+    {
+      "id": "w",
+      "file": "index/title-w.json.gz"
+    }
+  ],
+  "attribution": "Release data from the Discogs monthly dump (CC0). https://data.discogs.com/"
+}
