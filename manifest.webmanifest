@@ -2,27 +2,27 @@
   "name": "Stacks Of Wax",
   "short_name": "Stacks Of Wax",
   "description": "A private record library. Recording date and release date stay separate, and every sideman stays attached to the session.",
-  "id": "/stacksofwax-app/",
-  "start_url": "/stacksofwax-app/",
-  "scope": "/stacksofwax-app/",
+  "id": "/stacks-of-wax/",
+  "start_url": "/stacks-of-wax/",
+  "scope": "/stacks-of-wax/",
   "display": "standalone",
   "background_color": "#f3f0ea",
   "theme_color": "#f3f0ea",
   "icons": [
     {
-      "src": "/stacksofwax-app/icons/icon-192.png",
+      "src": "/stacks-of-wax/icons/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/stacksofwax-app/icons/icon-512.png",
+      "src": "/stacks-of-wax/icons/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/stacksofwax-app/icons/icon-maskable-512.png",
+      "src": "/stacks-of-wax/icons/icon-maskable-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
