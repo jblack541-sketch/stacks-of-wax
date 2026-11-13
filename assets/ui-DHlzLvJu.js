@@ -1,0 +1,1 @@
+var e=`h-11 w-full rounded-md border border-line bg-sheet px-3 text-base text-ink outline-none placeholder:text-faint focus-visible:border-pine`,t=`h-11 rounded-md border border-line bg-sheet px-3 text-sm font-medium text-ink disabled:opacity-50`,n=`h-11 rounded-md bg-pine px-4 text-sm font-medium text-paper disabled:opacity-50`;export{n,t as r,e as t};

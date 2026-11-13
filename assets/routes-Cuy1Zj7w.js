@@ -1,0 +1,1 @@
+import{t as e}from"./stacks-app-fEyHedmH.js";import{i as t}from"./index-DkhsVBjC.js";var n=t();function r(){return(0,n.jsx)(e,{})}export{r as component};

@@ -1,4 +1,5 @@
-const CACHE = "stacks-of-wax-v5";
+// Keep in step with CACHE in src/components/offline-ready.tsx.
+const CACHE = "stacks-of-wax-v6";
 
 const SCOPE = new URL(self.registration.scope).pathname;
 
@@ -10,9 +11,34 @@ function stripScope(pathname) {
   return pathname;
 }
 
+// Cache the whole app shell up front, lazy screens included, so every screen
+// opens offline even if it was never visited while online.
 self.addEventListener("install", (event) => {
-  event.waitUntil(self.skipWaiting());
+  event.waitUntil(precacheShell().finally(() => self.skipWaiting()));
 });
+
+async function precacheShell() {
+  try {
+    const listUrl = new URL("precache.json", self.registration.scope).href;
+    const response = await fetch(listUrl, { cache: "no-store" });
+    if (!response.ok) return;
+    const { files } = await response.json();
+    const cache = await caches.open(CACHE);
+    const urls = [self.registration.scope, ...files.map((file) => new URL(file, self.registration.scope).href)];
+    await Promise.all(
+      urls.map(async (url) => {
+        try {
+          const res = await fetch(url, { cache: "no-cache" });
+          if (res.ok) await cache.put(url === self.registration.scope ? new Request(url) : url, res);
+        } catch {
+          // One missing file should not stop the rest.
+        }
+      }),
+    );
+  } catch {
+    // No list (dev or another host). Files are still cached as they load.
+  }
+}
 
 self.addEventListener("activate", (event) => {
   event.waitUntil(
